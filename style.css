@@ -37,16 +37,17 @@ button {
   cursor: pointer;
 }
 
-.startBtn {
-}
-
-.resetBtn {
-}
-
 .game {
   display: grid;
   grid-template-columns: auto auto auto;
+}
+
+.field {
   justify-content: center;
+  text-align: center;
+  grid-gap: 10px;
+  height: 150px;
+  width: 300px;
 }
 
 .mrbump {
@@ -54,4 +55,9 @@ button {
   background-size: contain;
   height: 250px;
   width: 250px;
+  transition: all 0.4s;
+}
+
+.field.up .mrbump {
+  top: 0;
 }

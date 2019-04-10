@@ -1,30 +1,50 @@
-// const holes = document.querySelectorAll(".hole");
-// const scoreBoard = document.querySelector(".score");
-// const moles = document.querySelectorAll(".mole");
+const fields = document.querySelectorAll(".field");
+const scoreBoard = document.querySelector(".score");
+const mrBumps = document.querySelectorAll(".mrbump");
+let lastField;
+let timeUp;
+let score = 0;
 
 function timer(min, max) {
   return Math.round(Math.random() * (max - min) + min);
 }
 
-function randomHole(field) {
-  const idx = Math.floor(Math.random() * field.length);
-  const hole = field[idx];
-  if (hole == lastHole) {
-    return randomHole(field);
+function randomField(fields) {
+  const idx = Math.floor(Math.random() * fields.length);
+  const field = fields[idx];
+  if (fields == lastField) {
+    return randomField(field);
   }
-  lastHole = hole;
-  return hole;
+  lastField = field;
+  return field;
 }
 
 function surprise() {
-  const time = randomTime(500, 1200);
-  const hole = randomHole(field);
-  hole.classList.add("up");
+  const time = timer(500, 1200);
+  const field = randomField(fields);
+  field.classList.add("up");
   setTimeout(() => {
-    hole.classList.remove("up");
+    field.classList.remove("up");
     if (!timeUp) surprise();
   }, time);
 }
+
+function startGame() {
+  scoreBoard.textContent = 0;
+  timeUp = false;
+  score = 0;
+  surprise();
+  setTimeout(() => (timeUp = true), 2000);
+}
+
+function hit(e) {
+  if (!e.isTrusted) return;
+  score++;
+  this.classList.remove("up");
+  scoreBoard.textContent = score;
+}
+
+mrBumps.forEach(mrbump => mrbump.addEventListener("click", hit));
 
 function countDown() {
   seconds = document.getElementById("countdown").innerHTML;
