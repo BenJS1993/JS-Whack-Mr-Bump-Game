@@ -1,33 +1,57 @@
 body {
-    font-family: 'Indie Flower', cursive;
+  font-family: "Indie Flower", cursive;
+  overflow-x: hidden;
 }
 
 h1 {
-    font-size: 50px;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: bolder;
-    margin: auto;
-    padding: auto;
+  font-size: 50px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bolder;
+  margin: auto;
+  padding: auto;
 }
 
 h2 {
-    font-size: 30px;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: bold;
-    margin: auto;
-    padding: auto;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  margin: auto;
+  padding: auto;
 }
 
-.button {
-    font-size: 20px;
+button {
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Indie Flower", cursive;
+  font-size: 20px;
+  font-weight: bolder;
+  margin: 5px auto;
+  padding: 5px;
+  border-radius: 5px;
+  justify-content: center;
+  display: flex;
+  border-style: solid;
+  border-color: black;
+  cursor: pointer;
 }
 
-.field {
-    display: grid;
+.startBtn {
+}
+
+.resetBtn {
+}
+
+.game {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
 }
 
 .mrbump {
-    display: grid;
+  display: none;
+  background-size: contain;
+  height: 250px;
+  width: 250px;
 }
