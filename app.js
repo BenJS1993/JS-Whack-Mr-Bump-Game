@@ -20,7 +20,7 @@ function randomField(fields) {
 }
 
 function surprise() {
-  const time = timer(500, 1200);
+  const time = timer(300, 1000);
   const field = randomField(fields);
   field.classList.add("up");
   setTimeout(() => {
@@ -34,7 +34,7 @@ function startGame() {
   timeUp = false;
   score = 0;
   surprise();
-  setTimeout(() => (timeUp = true), 10000);
+  setTimeout(() => (timeUp = true), 15000);
 }
 
 function hit(e) {
@@ -46,8 +46,8 @@ function hit(e) {
 
 mrBumps.forEach(mrbump => mrbump.addEventListener("click", hit));
 
-function countDown() {
-  seconds = document.getElementById("countdown").innerHTML;
+function countdown() {
+  seconds = document.getElementById("countDown").innerHTML;
 
   if (seconds == 0) {
     temp.innerHTML = "Buzzzz!!";
