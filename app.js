@@ -47,7 +47,7 @@ function hit(e) {
 mrBumps.forEach(mrbump => mrbump.addEventListener("click", hit));
 
 function countdown() {
-  seconds = document.getElementById("countDown").innerHTML;
+  seconds = document.getElementById("countdown").innerHTML;
 
   if (seconds == 0) {
     temp.innerHTML = "Buzzzz!!";
