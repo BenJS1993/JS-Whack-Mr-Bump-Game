@@ -12,8 +12,8 @@ function timer(min, max) {
 function randomField(fields) {
   const idx = Math.floor(Math.random() * fields.length);
   const field = fields[idx];
-  if (fields == lastField) {
-    return randomField(field);
+  if (field === lastField) {
+    return randomField(fields);
   }
   lastField = field;
   return field;
@@ -34,7 +34,7 @@ function startGame() {
   timeUp = false;
   score = 0;
   surprise();
-  setTimeout(() => (timeUp = true), 2000);
+  setTimeout(() => (timeUp = true), 10000);
 }
 
 function hit(e) {

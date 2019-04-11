@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Whack Mr Bump!</title>
+    <title>Whack Mr. Bump!</title>
     <link
       href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700"
       rel="stylesheet"
@@ -16,10 +16,10 @@
     </style>
 
     <h1>Whack Mr. Bump!</h1>
-    <button class="startBtn" onClick="startGame()">Start</button>
-    <button class="resetBtn" onClick="resetGame()">Reset</button>
+    <button onclick="startGame()">Start</button>
+    <button type="reset" onclick="resetGame()" value="Reset">Reset</button>
 
-    <h2>Timer: <span class="timer">60</span></h2>
+    <h2>Timer: <span class="timer" id="countdown">60</span></h2>
 
     <h2>
       Score:
