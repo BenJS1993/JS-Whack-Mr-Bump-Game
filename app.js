@@ -65,7 +65,11 @@ function countdown() {
   setTimeout(countDown, 1000);
 }
 
-function buttonDisable(id) {
+function buttonDisable() {
   document.getElementById("startBtn").disabled = true;
-  setTimeout(function(){document.getElementById("startBtn").disabled = false;}, 15000)
+  setTimeout(function() {
+    document.getElementById("startBtn").disabled = false;
+  }, 15000)
 }
+
+document.getElementById("startBtn").addEventListener("click", buttonDisable);

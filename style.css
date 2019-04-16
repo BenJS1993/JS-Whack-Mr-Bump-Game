@@ -60,12 +60,13 @@ button::after {
 }
 
 .mrbump {
-  /* display: none; */
   background-size: 60%;
   transition: all 0.5s;
   position: absolute;
   top: 100%;
-  height: 100%;
+  height: 315px;
+  width: 315px;
+  margin-left: 50px;
 }
 
 .field.up .mrbump {
