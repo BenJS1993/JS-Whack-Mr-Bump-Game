@@ -64,3 +64,8 @@ function countdown() {
   temp.innerHTML = seconds;
   setTimeout(countDown, 1000);
 }
+
+function buttonDisable(id) {
+  document.getElementById("startBtn").disabled = true;
+  setTimeout(function(){document.getElementById("startBtn").disabled = false;}, 15000)
+}
