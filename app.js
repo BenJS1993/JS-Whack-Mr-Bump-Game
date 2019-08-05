@@ -73,3 +73,13 @@ function buttonDisable() {
 }
 
 document.getElementById("startBtn").addEventListener("click", buttonDisable);
+
+let timeCountdown = 15;
+let theTimer = setInterval(function(){
+  document.getElementById("countdown").innerHTML = timeCountdown;
+  timeCountdown -= 1;
+  if(timeCountdown <= 0){
+    clearInterval(theTimer);
+    document.getElementById("countdown").innerHTML = "TIME UP"
+  }
+}, 1000);
