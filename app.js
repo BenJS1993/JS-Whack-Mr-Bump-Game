@@ -76,8 +76,8 @@ document.getElementById("startBtn").addEventListener("click", buttonDisable);
 
 let timeCountdown = 15;
 let theTimer = setInterval(function(){
-  document.getElementById("countdown").innerHTML = timeCountdown;
-  timeCountdown -= 1;
+  // document.getElementById("countdown").innerHTML = timeCountdown;
+  timeCountdown--;
   if(timeCountdown <= 0){
     clearInterval(theTimer);
     document.getElementById("countdown").innerHTML = "TIME UP"
